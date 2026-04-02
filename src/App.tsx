@@ -84,7 +84,7 @@ const Navbar = () => {
           className="text-2xl font-display font-bold tracking-tighter"
           onMouseEnter={playHoverSound}
         >
-          LAYER<span className="text-brand-gold">³</span>
+          LAYER 3
         </motion.div>
 
         <div className="hidden md:flex space-x-12 items-center">
@@ -142,10 +142,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-7xl md:text-9xl font-sans tracking-tighter mb-6 drop-shadow-2xl">
-            L A Y E R<span className="text-brand-gold">³</span>
+          <h1 className="text-7xl md:text-9xl font-sans font-bold tracking-tighter mb-6 drop-shadow-2xl">
+            L A Y E R 3
           </h1>
-          <p className="text-brand-white/60 font-sans tracking-[0.6em] uppercase text-[10px] md:text-xs">
+          <p className="text-brand-white/60 font-sans tracking-[0.6em] uppercase text-base md:text-xl">
             Restaurant & Cafe 
           </p>
         </motion.div>
@@ -267,7 +267,7 @@ export default function App() {
       <footer id="contact" className="py-32 px-6 md:px-12 border-t border-current/10">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
           <div>
-            <h3 className="text-2xl font-bold mb-6">LAYER<span className="text-brand-gold">³</span></h3>
+            <h3 className="text-2xl font-bold mb-6">LAYER3</h3>
             <div className="flex justify-center md:justify-start space-x-4">
               <Instagram size={20} onMouseEnter={playHoverSound} className="cursor-pointer hover:text-brand-gold transition-colors" />
               <Facebook size={20} onMouseEnter={playHoverSound} className="cursor-pointer hover:text-brand-gold transition-colors" />
