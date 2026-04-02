@@ -72,13 +72,10 @@ const CustomCursor = () => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const backgroundColor = useTransform(scrollYProgress, [0, 0.1], ["rgba(11,11,11,0)", "rgba(11,11,11,0.9)"]);
 
   return (
     <motion.nav 
-      style={{ backgroundColor }}
-      className="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-500 backdrop-blur-sm"
+      className="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <motion.div 
@@ -118,10 +115,13 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 z-0 grayscale-0 opacity-60">
-        <img 
-          src="https://images.unsplash.com/photo-1534422298391-e4f8c170db06?q=80&w=2070&auto=format&fit=crop" 
+        <video 
+          src="/assets/herovdo.mp4"
           className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-brand-black/60 to-brand-black" />
       </motion.div>
@@ -131,8 +131,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-7xl md:text-9xl font-serif italic tracking-tighter mb-6 drop-shadow-2xl">
-            Layer<span className="text-brand-gold">³</span>
+          <h1 className="text-7xl md:text-9xl font-sans tracking-tighter mb-6 drop-shadow-2xl">
+            L A Y E R<span className="text-brand-gold">³</span>
           </h1>
           <p className="text-brand-white/60 font-sans tracking-[0.6em] uppercase text-[10px] md:text-xs">
             The Art of Minimalist Dining
@@ -142,7 +142,7 @@ const Hero = () => {
       <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2.5 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-brand-gold/40"
+        clheherassName="absolute bottom-12 left-1/2 -translate-x-1/2 text-brand-gold/40"
       >
         <ChevronDown size={32} />
       </motion.div>
