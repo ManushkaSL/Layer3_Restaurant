@@ -111,18 +111,29 @@ const Navbar = () => {
 const Hero = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
+  const [videoError, setVideoError] = useState(false);
   
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 z-0 grayscale-0 opacity-60">
-        <video 
-          src="/assets/herovdo.mp4"
-          className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        {!videoError ? (
+          <video 
+            src="/assets/herovdo.mp4"
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            onError={() => setVideoError(true)}
+          />
+        ) : (
+          <img 
+            src="https://images.unsplash.com/photo-1534422298391-e4f8c170db06?q=80&w=2070&auto=format&fit=crop" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-brand-black/60 to-brand-black" />
       </motion.div>
       <div className="relative z-10 text-center px-6">
