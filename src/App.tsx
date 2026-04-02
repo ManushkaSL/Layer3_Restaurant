@@ -146,7 +146,7 @@ const Hero = () => {
             L A Y E R<span className="text-brand-gold">³</span>
           </h1>
           <p className="text-brand-white/60 font-sans tracking-[0.6em] uppercase text-[10px] md:text-xs">
-            The Art of Minimalist Dining
+            Restaurant & Cafe 
           </p>
         </motion.div>
       </div>
