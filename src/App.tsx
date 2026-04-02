@@ -118,7 +118,7 @@ const Hero = () => {
       <motion.div style={{ y }} className="absolute inset-0 z-0 grayscale-0 opacity-60">
         {!videoError ? (
           <video 
-            src="/assets/herovdo.mp4"
+            src="/assets/vdo.mp4"
             className="w-full h-full object-cover"
             autoPlay
             loop
